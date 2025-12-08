@@ -1,0 +1,186 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Booking App Otp code</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f8f6;
+      min-height: 100%;     }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      flex: 1; /* take available space */
+    }
+
+    @media screen and (max-width:599px) {
+      .container {
+        width: 100%;
+        background: #ffffff;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        overflow: hidden;
+      }
+      .header {
+        background:  rgb(31, 147, 255);
+        color: #ffffff;
+        text-align: center;
+        padding: 20px;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+      .content {
+        padding: 30px 25px;
+        color: #333333;
+        line-height: 1.6;
+      }
+      .otp-box {
+        background-color:  rgb(31, 147, 255);;
+        border: 2px dashed #ffbc1fff;
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 20px 0;
+        letter-spacing: 4px;
+        color: #575755ff;
+      }
+      .footer {
+        background: #f0f0f0;
+        text-align: center;
+        padding: 15px;
+        font-size: 12px;
+        color: #666666;
+      }
+      .phone_details {
+        max-width: 100%;
+        margin: 10px 0;
+        background-color: whitesmoke;
+        border-radius: 20px;
+        padding: 20px;
+      }
+      .cen {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+      }
+      .cen h2 { font-size: 18px; font-weight: 400; }
+      .cen p { font-size: 17px; }
+    }
+
+    @media screen and (min-width:600px) {
+      .container {
+        width: 100%;
+        margin: 30px auto;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        overflow: hidden;
+      }
+      .header {
+        background:   rgb(31, 147, 255);;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 10px;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+      .content {
+        padding: 30px 25px;
+        color: #333333;
+        line-height: 1.6;
+      }
+      .otp-box {
+        background-color:  rgb(31, 147, 255);;
+        border: 2px dashed  #ffbc1fff;
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        padding: 15px;
+        margin: 20px 0;
+        letter-spacing: 4px;
+        color:  rgb(255, 255, 255);
+      }
+      .footer {
+        background: #f0f0f0;
+        text-align: center;
+        padding: 15px;
+        font-size: 12px;
+        color: #666666;
+      }
+      .phone_details {
+        max-width: 100%;
+        margin: 10px 0;
+        background-color: whitesmoke;
+        border-radius: 20px;
+        padding: 20px;
+      }
+      .cen {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+      }
+      .cen h2 { font-size: 18px; font-weight: 400; }
+      .cen p { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Booking App</h1>
+      <p>Secure Access Verification</p>
+    </div>
+    <div class="content">
+      <p>Hello,</p>
+      <p>
+      We’ve received a request to verify your account on Booking App.
+To complete this verification process, please use the following One-Time Password (OTP):
+      </p>
+      <div class="phone_details">
+        <h2>Details</h2>
+        <hr>
+        <div class="cen"><h2>Device Name</h2><p>${Device?.deviceName}</p></div>
+        <hr>
+        <div class="cen"><h2>Device Vision</h2><p>${Device?.osName}</p></div>
+        <hr>
+        <div class="cen"><h2>Type</h2><p>${Device?.modelName}</p></div>
+        <hr>
+        <div class="cen"><h2>IP Address</h2><p>${ip}</p></div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="otp-box">${otp}</div>
+      <p>
+      This OTP will expire in <strong>5 minutes</strong>. Do not share it with anyone for your security.</p>
+      <p>  Thank you for choosing Booking App.
+Your safety is our top priority.</p>
+    </div>
+  </div>
+
+  <div id="copy" class="footer"></div>
+
+  <script>
+    document.getElementById('copy').innerHTML = &copy; ${new Date().getFullYear()} Booking App – All Rights Reserved;
+  </script>
+</body>
+</html>
