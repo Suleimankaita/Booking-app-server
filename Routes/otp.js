@@ -7,7 +7,7 @@ route.route('/Sendotp')
 route.route('/VerifyOtp')
 .post(verifyOtp)
 route.route('/resetOtp_password')
-.post(resetPassword)
+.patch(resetPassword)
 
 module.exports=route;
     

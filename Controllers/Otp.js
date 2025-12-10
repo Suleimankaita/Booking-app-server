@@ -371,6 +371,7 @@ const verifyOtp = async (req, res) => {
  const resetPassword = async (req, res) => {
   try {
     const { email, newPassword } = req.body;
+    console.log(req.body)
     if (!email || !newPassword)
       return res.status(400).json({ message: "Email and new password required" });
 

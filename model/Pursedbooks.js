@@ -9,6 +9,12 @@
         cfi:String,
            categories:String,
         Author:String,
+        mt:{
+            type:String,
+            default:()=>{
+                return Math.floor(99999,Math.random()*10000)+Math.floor(Math.random()*10000).toString('34')
+            }
+        },
         description:String,
           BookMarks: [{
         cfi:String,

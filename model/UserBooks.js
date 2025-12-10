@@ -17,6 +17,12 @@ const userBookSchema = new mongoose.Schema({
         type: Number,
         default: 1
     },
+    mt:{
+            type:String,
+            default:()=>{
+                return Math.floor(99999,Math.random()*10000)+Math.floor(Math.random()*10000).toString('34')
+            }
+        },
     istrialend: {
         type: Boolean,
         default: false
