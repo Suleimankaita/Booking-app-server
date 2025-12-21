@@ -67,6 +67,11 @@ mongoose.connection.once('open',()=>{
    app.use('/UpdateBookPage',require('./Routes/UpdatebookProgress'))
    app.use('/RemoveBookmark',require('./Routes/RemoveBookmark'))
    app.use('/UpdateProfile',uploads.single('file'),require('./Routes/UpdateProfile'))
+   app.use('/UpdateBook',uploads.fields([
+    {name:'file',maxCount:1},
+    {name:'epub',maxCount:1}
+
+   ]),require('./Routes/UpdateBook'))
    app.use('/Converter',uploads.single('file'),require('./Routes/Converter'))
    app.use('/Buy/Purchased',require('./Routes/Purchased'))
    app.use('/Buy/AddBooks',uploads.fields([
