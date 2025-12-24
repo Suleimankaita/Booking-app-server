@@ -3,11 +3,14 @@ const crypto = require("crypto");
 const User = require("../model/User");
 
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: 465,
+  secure: true, // MUST be true for 465
   auth: {
-    user: process.env.USER, 
-    pass: process.env.PASS, 
+    user: process.env.USER,
+    pass: process.env.PASS, // Gmail App Password
   },
+  connectionTimeout: 20_000,
 });
 
 const sendOtp = async (req, res) => {
