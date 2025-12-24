@@ -5,14 +5,14 @@ const User = require("../model/User");
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 465,
-  secure: true, // MUST be true for 465
+  secure: true, // true for 465
   auth: {
-    user: process.env.USER,
-    pass: process.env.PASS, // Gmail App Password
+    user: process.env.USER, 
+    pass: process.env.PASS, // Must be a 16-digit App Password
   },
-  connectionTimeout: 20_000,
+  // This forces IPv4, which helps avoid some Render-to-Google timeouts
+  family: 4 
 });
-
 const sendOtp = async (req, res) => {
   try {
     const { email,Device } = req.body;
