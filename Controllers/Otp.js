@@ -247,7 +247,7 @@ const sendOtp = async (req, res) => {
             <tr>
                 <td>
                     <div class="header" style="background: linear-gradient(to right, #2a3e74, #1a2a5e); color: #ffffff; text-align: left; padding: 25px 40px; display: flex; align-items: center;">
-                        <img src="http://localhost:3000/img/1764496169702Gemini_Generated_Image_68my3o68my3o68my.png" alt="Booking App Logo" class="logo" width="60" style="display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 60px; height: auto; margin-right: 20px; border-radius: 8px;">
+                        <img src="https://booking-app-server-y9ii.onrender.com/img/logo.png" alt="Booking App Logo" class="logo" width="60" style="display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 60px; height: auto; margin-right: 20px; border-radius: 8px;">
                         <div style="flex-grow: 1;">
                             <h1 style="margin: 0; font-size: 26px; font-weight: 700;">Booking App</h1>
                             <p style="margin: 5px 0 0; font-size: 15px; opacity: 0.9;">Secure Access Verification</p>
