@@ -82,6 +82,7 @@ mongoose.connection.once('open',()=>{
    app.use('/Add_categories', uploads.array('file'), require('./Routes/Add_categories'));
   app.use('/remove_categories', require('./Routes/remove_categories'));
   app.use('/GetCategories', require('./Routes/GetCategories'));
+  app.use('/DeleteBook', require('./Routes/DeleteBook'));
   
 })
 
