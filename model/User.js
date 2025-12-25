@@ -8,11 +8,14 @@ const UserSchema=new mongoose.Schema({
         unique: true, 
         index: true
     },
-    email:{
-        type:String,
-        unique: true, 
-        index: true
-    },
+    email: {
+  type: String,
+  required: true,
+  unique: true,
+  trim: true,
+  lowercase: true,
+}
+,
      isotp:{
         expireresAt:Number,
         otp:Number,
