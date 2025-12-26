@@ -12,7 +12,8 @@ const origins=require('./config/origin')
 const Connect=require('./config/connect')
 Connect()
 
-app.use(cors({origin:'*'}))
+// app.use(cors(origins))
+app.use(cors({ origin: (o, cb) => cb(null, true), credentials: true }));
 
 app.use(cookie_parser())
 

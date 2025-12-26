@@ -8,7 +8,7 @@ const allowedOrigin=require('./allowedOrigin')
             cb(new Error("Not Allowed by Cors origin "))
         }
     },
-    credentials: true
+    credentials: false
 } 
 
 module.exports=origins
